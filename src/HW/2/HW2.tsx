@@ -48,12 +48,10 @@ export const HW2 = () => {
 
   const filterUsers = () => {
     //'НУЖНО ПРОФИЛЬТРОВАТЬ ДРУЗЕЙ. ОСТАВЛЯЕМ ТОЛЬКО ТЕХ, КОТОРЫЕ ЖИВУТ В ГОРОДЕ LOS ANGELES'
-    const filteredUsers = users.myFriends.filter((friend=>{
-      return(friend.address.city === 'Los Angeles')
-    }));
+    const filteredUsers = users.myFriends.filter( friend => friend.address.city === 'Los Angeles');
     setCurrentUsers({ myFriends: filteredUsers });
   };
-
+  console.log(currentUsers)
   return (
     <div id={'hw02'}>
       <UserList2 users={currentUsers} filterUsers={filterUsers} />

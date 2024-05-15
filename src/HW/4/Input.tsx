@@ -1,15 +1,15 @@
 import {ChangeEvent} from 'react';
 
 type InputPropsType = {
-    currentText: string // НУЖНО ПРОТИПИЗИРОВАТЬ
-    setCurrentText: (newText: string) => void // НУЖНО ПРОТИПИЗИРОВАТЬ
+    currentText: string
+    setCurrentText: (newText: string) => void
 };
 
 export const Input = (props: InputPropsType) => {
     const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
 		const newText =event.currentTarget.value;
 		props.setCurrentText(newText);
-        // НУЖНО ДОПИСАТЬ
+
     };
 
     return (
